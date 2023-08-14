@@ -1,5 +1,5 @@
 import "@ui/styles/globals.css";
-
+import ThemeProvider from "../components/theme-provider";
 export default function RootLayout({
   children,
 }: {
@@ -7,7 +7,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        {children}
+      </ThemeProvider>
     </html>
   );
 }
