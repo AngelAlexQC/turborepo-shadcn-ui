@@ -1,10 +1,13 @@
-import { Button } from "@ui/components/button";
+import { buttonVariants } from "@ui/components/button";
+import Link from "next/link";
 
 export default function Page() {
   return (
-    <>
-      <h1>Web</h1>
-      <Button>Click me</Button>
-    </>
+    <main>
+      <h1>We Active</h1>
+      <Link href="dashboard" className={buttonVariants({ variant: "default" })}>
+        Go to dashboard
+      </Link>
+    </main>
   );
 }
